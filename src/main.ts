@@ -59,7 +59,7 @@ Options:
 Examples:
   npx @stripe/sdk-migrator --directory ./src --migration v1-namespace --language java
   npx @stripe/sdk-migrator --directory ./src --migration v1-namespace --language python
-  npx @stripe/sdk-migrator --directory ./src --migration v1-namespace --language python --dry-run
+  npx @stripe/sdk-migrator --directory ./src --migration v1-namespace --language python --execute
   npx @stripe/sdk-migrator --help
 `);
 }

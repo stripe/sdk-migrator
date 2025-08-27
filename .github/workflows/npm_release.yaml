@@ -23,8 +23,14 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Build
-        run: npm run build 
-      - name: Publish
-        run: npm publish --ignore-scripts --access public
+        run: npm run build
+      - name: Install Oathtool  
+        run: sudo apt-get install -y oathtool
+      - name: Publish to NPM
+        run: |
+          set +ex
+          npm config set //registry.npmjs.org/:_authToken $NPM_AUTH_TOKEN
+          npm publish --otp="$(oathtool -b --totp $NPM_OTP)" --ignore-scripts --access public
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_OTP: ${{ secrets.NPM_OTP }}

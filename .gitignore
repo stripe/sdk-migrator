@@ -1,0 +1,7 @@
+node_modules
+dist
+yarn-error.log
+tsconfig.tsbuildinfo
+.idea/
+**/.DS_Store
+.ruby-version

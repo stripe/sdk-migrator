@@ -1,0 +1,50 @@
+{
+  "name": "@stripe/sdk-migrator",
+  "version": "1.0.0",
+  "homepage": "https://github.com/stripe/sdk-migrator",
+  "description": "A TypeScript CLI tool for Stripe SDK migration",
+  "main": "dist/main.js",
+  "bin": {
+    "sdk-migrator": "./dist/main.js"
+  },
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/main.js",
+    "dev": "ts-node src/main.ts",
+    "clean": "rm -rf dist",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix",
+    "format": "prettier --write src/**/*.ts",
+    "format:check": "prettier --check src/**/*.ts"
+  },
+  "keywords": [
+    "stripe",
+    "migration",
+    "cli",
+    "typescript"
+  ],
+  "author": "Stripe <support@stripe.com> (https://stripe.com/)",
+  "license": "MIT",
+  "dependencies": {
+    "@ast-grep/lang-java": "0.0.4",
+    "@ast-grep/lang-python": "0.0.3",
+    "@ast-grep/napi": "0.39.4",
+    "glob": "10.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.2.5",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

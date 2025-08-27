@@ -1,4 +1,4 @@
-name: NPM Release @stripe/sdk-migrator
+name: "NPM Release @stripe/sdk-migrator"
 
 on:
   workflow_dispatch: {}
